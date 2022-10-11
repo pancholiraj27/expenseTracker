@@ -1,0 +1,22 @@
+.expenseTotal {
+  background-color: #d6f2ff;
+  border-radius: 12px;
+  width: 50%;
+  margin: 20px auto;
+  color: red;
+  box-shadow: 10px 10px 5px lightblue;
+}
+
+.expenseTotal h1 {
+  font-size: 26px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 390px) {
+  .expenseTotal {
+    width: 70%;
+  }
+  .expenseTotal h1 {
+    font-size: 22px;
+  }
+}

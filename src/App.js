@@ -1,24 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import ExpenseTotal from "./components/ExpenseTotal";
+import { BsArrowDownRight } from "react-icons/bs";
 
 function App() {
+  const [inputOn, setInputOn] = useState(false);
+  const [showExpense, setShowExpense] = useState(true);
+
+  // if localStorage not set this will set
+  useEffect(() => {
+    if (!localStorage.getItem("expensesData")) {
+      localStorage.setItem("expensesData", "[]");
+      localStorage.setItem("totalExpenseAmount", 0);
+      console.log("not there");
+    }
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <>
+      <div className="mainContainer">
+        <div className="innerContainer">
+          <h1 className="heading">Expense Tracker</h1>
+          <ExpenseTotal
+            inputOn={inputOn}
+            setInputOn={setInputOn}
+            setShowExpense={setShowExpense}
+          />
+        </div>
+      </div>
+
+      {/* arrow indicates when no expenses there */}
+      {showExpense ? (
+        <p className="addArrow">
+          Add Expense
+          <span className="arrowIcon">
+            <BsArrowDownRight />
+          </span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      ) : null}
+
+      {/* add button toggles when creating  */}
+      {!inputOn ? (
+        <span
+          onClick={() => {
+            setInputOn(true);
+            setShowExpense(false);
+          }}
+          className="addExpense"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          +
+        </span>
+      ) : null}
+    </>
   );
 }
 

@@ -1,0 +1,71 @@
+.expenseList ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.expenseList ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: white;
+  margin: 10px 0;
+}
+
+.expenseList ul li:hover {
+  box-shadow: 10px 10px 5px lightblue;
+  transform: scale(1.01);
+}
+
+.expenseList ul li .detail {
+  flex: 10;
+  text-align: start;
+}
+
+.expenseList ul li .detail p,
+span {
+  margin: 10px 0;
+}
+.expenseList ul li .detail span {
+  color: red;
+}
+
+.expenseList .buttons {
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.expenseList .buttons button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background: none;
+  font-size: 16px;
+}
+
+.btnDelEdt:hover {
+  color: rgb(1, 255, 1);
+}
+.btnDelEdt:last-child:hover {
+  color: red;
+}
+
+.noExpense {
+  background-color: white;
+  border-radius: 12px;
+  padding: 8px;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 390px) {
+  .expenseList ul li {
+    padding: 8px;
+  }
+}

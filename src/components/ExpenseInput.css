@@ -1,0 +1,145 @@
+.mainExpenseInput {
+  background-color: rgba(0, 0, 0, 0.756);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 5s ease-in;
+  margin: 0 auto;
+}
+
+.expenseInput {
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.from {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.from label {
+  margin: 10px 0px;
+}
+
+.from input {
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 1px solid black;
+}
+
+.from input:focus {
+  outline: none;
+}
+
+.from button {
+  padding: 10px;
+  border-radius: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 30%;
+  margin: 10px auto;
+  background: cornflowerblue;
+}
+
+/* for error code */
+.expenseAmountHide {
+  color: red;
+  transition: 0.2s ease-in;
+  /* display: ; */
+}
+
+.hide {
+  display: none;
+}
+
+.expenseNameHide {
+  color: red;
+  transition: 0.2s ease-in;
+}
+
+.from input.highlightForm {
+  border: 1px solid red;
+  transition: 0.2s ease-out;
+}
+button:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in;
+}
+
+@media screen and (max-width: 662px) {
+  .expenseInput {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .expenseInput {
+    width: 85%;
+    padding: 20px;
+  }
+  .from button {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .expenseInput {
+    width: 85%;
+    padding: 10px;
+  }
+  .from button {
+    width: 50%;
+  }
+}
+
+/* hide number filed arrow */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (min-width: 1280px) {
+  .expenseInput {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 986px) {
+  .expenseInput {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .expenseInput {
+    width: 60%;
+  }
+  .addArrow {
+    right: 16%;
+    transform: translate(-16%, -80%);
+  }
+}
+@media screen and (max-width: 600px) {
+  .expenseInput {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 486px) {
+  .expenseInput {
+    width: 80%;
+  }
+}
