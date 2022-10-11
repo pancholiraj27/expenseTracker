@@ -49,6 +49,7 @@
   width: 30%;
   margin: 10px auto;
   background: cornflowerblue;
+  cursor: pointer;
 }
 
 /* for error code */

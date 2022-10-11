@@ -3,6 +3,8 @@ import "./App.css";
 import ExpenseTotal from "./components/ExpenseTotal";
 import { BsArrowDownRight } from "react-icons/bs";
 
+const TITLE = "Expense Tracker";
+
 function App() {
   const [inputOn, setInputOn] = useState(false);
   const [showExpense, setShowExpense] = useState(true);
@@ -14,6 +16,7 @@ function App() {
       localStorage.setItem("totalExpenseAmount", 0);
       console.log("not there");
     }
+    document.title = "Expense Tracker";
   });
 
   return (

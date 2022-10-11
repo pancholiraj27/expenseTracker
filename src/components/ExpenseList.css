@@ -6,6 +6,7 @@
 }
 
 .expenseList ul li {
+  cursor: pointer;
   list-style: none;
   display: flex;
   justify-content: space-between;
