@@ -4,7 +4,12 @@ import ExpenseList from "./ExpenseList";
 import "./ExpenseTotal.css";
 export const ThemProvider = createContext();
 
-const ExpenseTotal = ({ inputOn, setInputOn, setShowExpense }) => {
+const ExpenseTotal = ({
+  inputOn,
+  setInputOn,
+  setShowExpense,
+  setShowColors,
+}) => {
   const [total, setTotal] = useState(0);
   const [expenseName, setExpenseName] = useState("");
   const [expenseAmount, setExpenseAmount] = useState("");
@@ -60,7 +65,7 @@ const ExpenseTotal = ({ inputOn, setInputOn, setShowExpense }) => {
           <h1>Total - &#8377;{total}</h1>
         </div>
         <ExpenseList />
-        {inputOn ? <ExpenseInput /> : null}
+        {inputOn ? <ExpenseInput setShowColors={setShowColors} /> : null}
       </>
     </ThemProvider.Provider>
   );

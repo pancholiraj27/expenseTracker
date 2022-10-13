@@ -1,0 +1,21 @@
+.colorBoxes {
+  position: fixed;
+  left: 2%;
+  bottom: 10%;
+  transform: translate(-2%, 10%);
+  cursor: pointer;
+}
+
+.color {
+  height: 1px;
+  padding: 20px 0px;
+  border-radius: 50%;
+  width: 50%;
+  margin: 20px;
+  border: 1px solid var(--bgAddHover);
+}
+
+.showColors {
+  /* color: var(--bgOutside); */
+  color: var(--headingColor);
+}

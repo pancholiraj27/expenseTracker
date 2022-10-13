@@ -1,16 +1,17 @@
 .mainExpenseInput {
-  background-color: rgba(0, 0, 0, 0.756);
+  background-color: var(--bgColorOpacity);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  transition: 5s ease-in;
+  transition: 2s ease-in;
   margin: 0 auto;
 }
 
 .expenseInput {
-  background-color: white;
+  transition: 2s ease-in;
+  background-color: var(--bgColor);
   position: fixed;
   top: 50%;
   left: 50%;
@@ -22,6 +23,7 @@
 }
 
 .from {
+  transition: 2s ease-in;
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -32,6 +34,7 @@
 }
 
 .from input {
+  transition: 2s ease-in;
   padding: 10px 15px;
   border-radius: 12px;
   border: 1px solid black;
@@ -42,19 +45,21 @@
 }
 
 .from button {
+  transition: 2s ease-in;
   padding: 10px;
   border-radius: 12px;
   margin: 10px 0;
   border: none;
   width: 30%;
   margin: 10px auto;
-  background: cornflowerblue;
+  background: var(--btnColor);
   cursor: pointer;
+  color: var(--textColor);
 }
 
 /* for error code */
 .expenseAmountHide {
-  color: red;
+  color: var(--expense);
   transition: 0.2s ease-in;
   /* display: ; */
 }
@@ -64,12 +69,12 @@
 }
 
 .expenseNameHide {
-  color: red;
+  color: var(--expense);
   transition: 0.2s ease-in;
 }
 
 .from input.highlightForm {
-  border: 1px solid red;
+  border: 1px solid var(--expense);
   transition: 0.2s ease-out;
 }
 button:hover {

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ThemProvider } from "./ExpenseTotal";
 import "./ExpenseInput.css";
-const ExpenseInput = () => {
+const ExpenseInput = ({ setShowColors }) => {
   const [expenseNameError, setExpenseNameError] = useState(false);
   const [expenseAmountError, setExpenseAmountError] = useState(false);
 
@@ -53,6 +53,7 @@ const ExpenseInput = () => {
             }
       );
       await setExpenses(updateExpense);
+      setShowColors(false);
       setInputOn(false);
       setIsEditing(false);
       setTotal(parseInt(total - parseInt(exAmount) + parseInt(expenseAmount)));
@@ -82,6 +83,7 @@ const ExpenseInput = () => {
       ...expenses,
     ]);
     setTotal(parseInt(expenseAmount) + total);
+    setShowColors(false);
     setInputOn(false);
     setExpenseAmount("");
     setExpenseName("");
@@ -99,6 +101,7 @@ const ExpenseInput = () => {
           setIsEditing(false);
           setExpenseAmount("");
           setExpenseName("");
+          setShowColors(false);
         }}
       ></div>
       <div className="expenseInput" onClick={() => setInputOn(true)}>

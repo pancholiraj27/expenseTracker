@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import ExpenseTotal from "./components/ExpenseTotal";
 import { BsArrowDownRight } from "react-icons/bs";
-
-const TITLE = "Expense Tracker";
+import ColorChanger from "./components/ColorChanger";
 
 function App() {
   const [inputOn, setInputOn] = useState(false);
   const [showExpense, setShowExpense] = useState(true);
+
+  // for toggle change color
+  const [showColors, setShowColors] = useState(false);
+  const [bgColors, setBgColors] = useState("blue");
 
   // if localStorage not set this will set
   useEffect(() => {
@@ -17,42 +20,57 @@ function App() {
       console.log("not there");
     }
     document.title = "Expense Tracker";
+    document.lo = "Expense Tracker";
   });
-
+  console.log(bgColors);
   return (
     <>
-      <div className="mainContainer">
+      <div
+        className={`mainContainer ${bgColors}`}
+        onClick={() => setShowColors(false)}
+      >
         <div className="innerContainer">
           <h1 className="heading">Expense Tracker</h1>
           <ExpenseTotal
             inputOn={inputOn}
             setInputOn={setInputOn}
             setShowExpense={setShowExpense}
+            setShowColors={setShowColors}
           />
         </div>
       </div>
-
       {/* arrow indicates when no expenses there */}
       {showExpense ? (
-        <p className="addArrow">
+        <p className={`addArrow ${bgColors}`}>
           Add Expense
           <span className="arrowIcon">
             <BsArrowDownRight />
           </span>
         </p>
       ) : null}
-
       {/* add button toggles when creating  */}
       {!inputOn ? (
         <span
           onClick={() => {
             setInputOn(true);
             setShowExpense(false);
+            setShowColors(false);
           }}
-          className="addExpense"
+          className={`addExpense ${bgColors}`}
         >
           +
         </span>
+      ) : null}
+
+      {!inputOn ? (
+        <>
+          <ColorChanger
+            showColors={showColors}
+            setShowColors={setShowColors}
+            bgColors={bgColors}
+            setBgColors={setBgColors}
+          />
+        </>
       ) : null}
     </>
   );

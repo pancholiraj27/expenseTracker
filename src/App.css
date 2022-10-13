@@ -1,5 +1,57 @@
+.cyan {
+  --bgColor: #e0f7fa;
+  --bgOutside: #ffffff;
+  --totalBox: #d6f2ff
+  --textColor: #000000;
+  --expense: #ff0000;
+  --addBtn: #0000ff;
+  --addBtnHover: #ffffff;
+  --bgAddHover: black;
+  --boxShadow: lightblue;
+  --btnColor: lightblue;
+  --bgColorOpacity: rgba(0, 0, 0, 0.7);
+  --headingColor: black; 
+  --borderRadius: black;  
+}
+
+.black {
+  --bgColor: rgb(0, 0, 0);
+  --bgOutside: #ffffff;
+  --totalBox: rgb(15, 13, 13);
+  --textColor: black;
+  --expense: #ff0000;
+  --addBtn: #0000ff;
+  --addBtnHover: black;
+  --bgAddHover:#d3d3d3;
+  --boxShadow: #a1a1a1;
+  --btnColor: #a1a1a1;
+  --bgColorOpacity: rgba(255,255,255,.9);
+  --headingColor: white; 
+--borderRadius: white;  
+}
+
+.white {
+  --bgColor: rgb(255, 255, 255);
+  --bgOutside: black;
+  --totalBox: rgb(255, 249, 249);
+  --totalBox: rgb(255, 249, 249);
+  --textColor: white;
+  --expense: #ff0000;
+  --addBtn: #0000ff;
+  --addBtnHover: rgb(209, 208, 208);
+  --bgAddHover: black;
+  --boxShadow: #494949;
+  --btnColor: #494949;
+  --bgColorOpacity: rgb(0, 0, 0 , .9);
+  --headingColor: black; 
+  --borderRadius: black;  
+}
+
+
+
+
 .mainContainer {
-  background-color: #e0f7fa;
+  background-color: var(--bgColor);
   width: 100%;
   min-height: 100vh;
   text-align: center;
@@ -13,11 +65,12 @@
 
 .innerContainer .heading {
   padding-top: 20px;
+  color: var(--headingColor);
 }
 .addExpense {
   position: fixed;
-  color: blue;
-  background-color: white;
+  color: var(--addBtn);
+  background-color: var(--bgOutside);
   border-radius: 50%;
   padding: 10px 15px;
   left: 90%;
@@ -27,8 +80,9 @@
 }
 
 .addExpense:hover {
-  color: white;
-  background-color: black;
+  color: var(--addBtnHover);
+  background-color: var(--bgAddHover);
+  /* background-color: white; */
   transition: 0.3s ease-in;
 }
 
