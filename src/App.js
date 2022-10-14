@@ -25,7 +25,7 @@ function App() {
     }
     document.title = "Expense Tracker";
     document.lo = "Expense Tracker";
-  }, []);
+  }, [bgColors]);
 
   return (
     <>
