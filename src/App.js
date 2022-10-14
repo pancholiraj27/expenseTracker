@@ -10,7 +10,7 @@ function App() {
 
   // for toggle change color
   const [showColors, setShowColors] = useState(false);
-  const [bgColors, setBgColors] = useState();
+  const [bgColors, setBgColors] = useState(localStorage.getItem("themeColor"));
 
   // if localStorage not set this will set
   useEffect(() => {

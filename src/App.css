@@ -95,6 +95,7 @@
   font-size: 18px;
   animation: blinker 2s linear infinite;
   z-index: 1;
+  color: var(--textColor);
 }
 
 .arrowIcon {
