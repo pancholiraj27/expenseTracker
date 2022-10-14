@@ -12,6 +12,10 @@ function App() {
   const [showColors, setShowColors] = useState(false);
   const [bgColors, setBgColors] = useState(localStorage.getItem("themeColor"));
 
+  useEffect(() => {
+    setBgColors("black");
+  }, []);
+
   // if localStorage not set this will set
   useEffect(() => {
     if (!localStorage.getItem("expensesData")) {
@@ -20,12 +24,10 @@ function App() {
       localStorage.setItem("totalExpenseAmount", 0);
       console.log("not there");
     }
-    if (bgColors === "") {
-      setBgColors("black");
-    }
+
     document.title = "Expense Tracker";
     document.lo = "Expense Tracker";
-  }, [bgColors]);
+  }, []);
 
   return (
     <>

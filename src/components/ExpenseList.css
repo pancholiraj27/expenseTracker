@@ -2,7 +2,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  transition: 2s;
+  transition: 1s;
 }
 
 .expenseList ul li {

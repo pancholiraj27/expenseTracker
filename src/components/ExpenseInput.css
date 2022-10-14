@@ -5,12 +5,12 @@
   bottom: 0;
   left: 0;
   right: 0;
-  transition: 2s;
+  transition: 1s;
   margin: 0 auto;
 }
 
 .expenseInput {
-  transition: 2s ease-in;
+  transition: 1s ease-in;
   background-color: var(--bgColor);
   position: fixed;
   top: 50%;
@@ -23,7 +23,7 @@
 }
 
 .from {
-  transition: 2s ease-in;
+  transition: 1s ease-in;
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -35,7 +35,7 @@
 }
 
 .from input {
-  transition: 2s ease-in;
+  transition: 1s ease-in;
   padding: 10px 15px;
   border-radius: 12px;
   border: 1px solid black;
