@@ -10,19 +10,20 @@ function App() {
 
   // for toggle change color
   const [showColors, setShowColors] = useState(false);
-  const [bgColors, setBgColors] = useState("blue");
+  const [bgColors, setBgColors] = useState();
 
   // if localStorage not set this will set
   useEffect(() => {
     if (!localStorage.getItem("expensesData")) {
       localStorage.setItem("expensesData", "[]");
+      localStorage.setItem("themeColor", "black");
       localStorage.setItem("totalExpenseAmount", 0);
       console.log("not there");
     }
     document.title = "Expense Tracker";
     document.lo = "Expense Tracker";
-  });
-  console.log(bgColors);
+  }, []);
+
   return (
     <>
       <div
@@ -36,6 +37,8 @@ function App() {
             setInputOn={setInputOn}
             setShowExpense={setShowExpense}
             setShowColors={setShowColors}
+            setBgColors={setBgColors}
+            bgColors={bgColors}
           />
         </div>
       </div>

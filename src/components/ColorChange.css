@@ -7,15 +7,17 @@
 }
 
 .color {
-  height: 1px;
-  padding: 20px 0px;
+  padding: 22px 0px;
   border-radius: 50%;
   width: 50%;
   margin: 20px;
-  border: 1px solid var(--bgAddHover);
+  border: 1px solid var(--headingColor);
+}
+
+.color:hover {
+  transform: scale(1.1);
 }
 
 .showColors {
-  /* color: var(--bgOutside); */
   color: var(--headingColor);
 }

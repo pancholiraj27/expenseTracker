@@ -2,11 +2,10 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  transition: 1s;
+  transition: 2s;
 }
 
 .expenseList ul li {
-  cursor: pointer;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -27,6 +26,11 @@
 .expenseList ul li .detail {
   flex: 10;
   text-align: start;
+}
+
+.expenseList ul li .detail p {
+  /* font-size: 18px; */
+  text-transform: capitalize;
 }
 
 .expenseList ul li .detail p,
@@ -50,6 +54,7 @@ span {
   background: none;
   font-size: 16px;
   color: var(--textColor);
+  cursor: pointer;
 }
 
 .btnDelEdt:first-child:hover {
@@ -66,6 +71,7 @@ span {
   width: 80%;
   margin: 0 auto;
   font-size: 12px;
+  color: var(--textColor);
 }
 
 @media screen and (max-width: 390px) {

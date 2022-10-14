@@ -9,6 +9,8 @@ const ExpenseTotal = ({
   setInputOn,
   setShowExpense,
   setShowColors,
+  setBgColors,
+  bgColors,
 }) => {
   const [total, setTotal] = useState(0);
   const [expenseName, setExpenseName] = useState("");
@@ -18,13 +20,18 @@ const ExpenseTotal = ({
   const [editId, setEditId] = useState();
 
   useEffect(() => {
+    // for expenses Data
     const retriveData = JSON.parse(localStorage.getItem("expensesData"));
-    if (retriveData) {
-      setExpenses(retriveData);
-    }
+    if (retriveData) setExpenses(retriveData);
+
+    // for total
     const retriveTotal = JSON.parse(localStorage.getItem("totalExpenseAmount"));
     if (retriveTotal) setTotal(parseInt(retriveTotal));
-  }, []);
+
+    // for theme
+    const retriveTheme = localStorage.getItem("themeColor");
+    if (retriveTheme) setBgColors(retriveTheme);
+  }, [setBgColors]);
 
   useEffect(() => {
     if (expenses?.length) {
@@ -36,11 +43,17 @@ const ExpenseTotal = ({
     } else {
       setShowExpense(true);
     }
-  }, [expenses]);
+  }, [expenses, setShowExpense]);
 
   useEffect(() => {
     localStorage.setItem("totalExpenseAmount", total);
   }, [total]);
+
+  useEffect(() => {
+    if (bgColors !== undefined) {
+      localStorage.setItem("themeColor", bgColors);
+    }
+  }, [bgColors]);
 
   return (
     <ThemProvider.Provider

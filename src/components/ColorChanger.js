@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ColorChange.css";
 const ColorChanger = ({ bgColors, setBgColors, showColors, setShowColors }) => {
   const colors = ["cyan", "black", "white"];
 
+  console.log(bgColors);
   return (
     <>
       <div className={`colorBoxes ${bgColors}`}>

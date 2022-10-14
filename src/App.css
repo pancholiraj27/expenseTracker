@@ -3,7 +3,7 @@
   --bgOutside: #ffffff;
   --totalBox: #d6f2ff
   --textColor: #000000;
-  --expense: #ff0000;
+  --expense: #c300a4;
   --addBtn: #0000ff;
   --addBtnHover: #ffffff;
   --bgAddHover: black;
@@ -15,34 +15,33 @@
 }
 
 .black {
-  --bgColor: rgb(0, 0, 0);
-  --bgOutside: #ffffff;
-  --totalBox: rgb(15, 13, 13);
-  --textColor: black;
-  --expense: #ff0000;
-  --addBtn: #0000ff;
+  --bgColor: rgb(20, 29, 38);
+  --bgOutside: #243447;
+  --totalBox: #243447;
+  --textColor: #F5F8FA;
+  --expense: #6dc2ff;
+  --addBtn: #ffffff;
   --addBtnHover: black;
   --bgAddHover:#d3d3d3;
-  --boxShadow: #a1a1a1;
-  --btnColor: #a1a1a1;
-  --bgColorOpacity: rgba(255,255,255,.9);
-  --headingColor: white; 
+  --boxShadow: #11181d;
+  --btnColor: rgb(20,29,38);
+  --bgColorOpacity: rgba(0,0,0,.8);
+  --headingColor: #F5F8FA; 
 --borderRadius: white;  
 }
 
 .white {
-  --bgColor: rgb(255, 255, 255);
-  --bgOutside: black;
-  --totalBox: rgb(255, 249, 249);
-  --totalBox: rgb(255, 249, 249);
-  --textColor: white;
-  --expense: #ff0000;
-  --addBtn: #0000ff;
+  --bgColor: #F5F8FA;
+  --bgOutside:#E1E8ED;
+  --totalBox: #E1E8ED;
+  --textColor: #14171A;
+  --expense: #6a00c6;
+  --addBtn: black;
   --addBtnHover: rgb(209, 208, 208);
   --bgAddHover: black;
-  --boxShadow: #494949;
-  --btnColor: #494949;
-  --bgColorOpacity: rgb(0, 0, 0 , .9);
+  --boxShadow: #d2d2d2;
+  --btnColor: #F5F8FA;
+  --bgColorOpacity: rgb(255, 255, 255 , .9);
   --headingColor: black; 
   --borderRadius: black;  
 }
@@ -56,9 +55,11 @@
   min-height: 100vh;
   text-align: center;
   position: relative;
+  transition: 2s ;
 }
 
 .innerContainer {
+  transition: 2s ;
   width: 40%;
   margin: 0 auto;
 }

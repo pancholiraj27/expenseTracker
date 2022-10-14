@@ -3,7 +3,7 @@
   border-radius: 12px;
   width: 50%;
   margin: 20px auto;
-  color: red;
+  color: var(--expense);
   box-shadow: 10px 10px 5px var(--boxShadow);
 }
 

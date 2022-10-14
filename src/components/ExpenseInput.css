@@ -5,7 +5,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  transition: 2s ease-in;
+  transition: 2s;
   margin: 0 auto;
 }
 
@@ -31,6 +31,7 @@
 
 .from label {
   margin: 10px 0px;
+  color: var(--textColor);
 }
 
 .from input {
@@ -45,14 +46,13 @@
 }
 
 .from button {
-  transition: 2s ease-in;
   padding: 10px;
   border-radius: 12px;
   margin: 10px 0;
   border: none;
   width: 30%;
   margin: 10px auto;
-  background: var(--btnColor);
+  background: var(--totalBox);
   cursor: pointer;
   color: var(--textColor);
 }
