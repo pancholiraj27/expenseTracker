@@ -13,8 +13,10 @@ function App() {
   const [bgColors, setBgColors] = useState(localStorage.getItem("themeColor"));
 
   useEffect(() => {
-    setBgColors("black");
-  }, []);
+    if (!bgColors) {
+      setBgColors("black");
+    }
+  }, [bgColors]);
 
   // if localStorage not set this will set
   useEffect(() => {
