@@ -20,7 +20,9 @@ function App() {
       localStorage.setItem("totalExpenseAmount", 0);
       console.log("not there");
     }
-    setBgColors("black");
+    if (bgColors == "") {
+      setBgColors("black");
+    }
     document.title = "Expense Tracker";
     document.lo = "Expense Tracker";
   }, []);
