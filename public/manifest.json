@@ -1,16 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "expense tracer",
+  "name": "Expense Tracker",
   "author": "Raj Pancholi",
   "version": "1.0.1",
-  "description": "Tracks your expense & remind you every time you open a new tab ",
+  "description": "This extension give user an utility to manage their expenses with add, edit, delete functionality with local storage API",
   "icons": {
     "16": "logo16.png",
     "32": "logo32.png",
     "192": "logo192.png",
     "512": "logo512.png"
   },
-  "permissions": ["activeTab", "tabs"],
+  "permissions": ["tabs"],
   "chrome_url_overrides": {
     "newtab": "index.html"
   }

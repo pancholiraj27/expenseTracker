@@ -31,6 +31,8 @@ const ExpenseTotal = ({
     // for theme
     const retriveTheme = localStorage.getItem("themeColor");
     if (retriveTheme) setBgColors(retriveTheme);
+
+    
   }, [setBgColors]);
 
   useEffect(() => {
