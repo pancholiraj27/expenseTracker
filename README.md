@@ -9,7 +9,7 @@ The Expense Tracker Chrome Extension is a powerful tool that helps you track you
   <li>Total Expense Overview</li>
   <li>Edit and Delete Expenses</li>
   <li>Customizable Themes</li>
- 
+</ol>
 
 ## Installation
 <ol>
